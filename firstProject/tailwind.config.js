@@ -9,9 +9,20 @@ export default {
       colors:{
         BrightLightBlue : '#34D3F6' ,
         green : '#83FF97',
+        Green: {
+          50: '#e6fff0',  // Very light green
+          100: '#ccffdf', // Lighter green
+          200: '#99ffbf', // Light green
+          300: '#66ff9f', // Custom green lighter
+          400: '#33ff80', // Slightly lighter than original
+          500: '#83FF97', // Original custom green
+          600: '#33cc66', // Slightly darker
+          700: '#28a653', // Dark green
+          800: '#1f8040', // Darker green
+          900: '#146633', // Very dark green
+        },
       },
       backgroundImage: {
-        'grid-pattern': "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\"%3E%3Cpath stroke=\"rgba(0, 0, 0, 0.3)\" d=\"M 0 1 L 20 1 M 1 0 L 1 20\"/%3E%3C/svg%3E')",
         'elliptical-gradient': 'radial-gradient(ellipse 60% 80% at center, #3C5557 0%, #1D2B2C 80%)',
       },
       boxShadow: {
@@ -31,13 +42,7 @@ export default {
     },
   },
   plugins: [
-    function ({ addUtilities, theme }) {
-      const wordSpacing = theme('wordSpacing');
-      const utilities = Object.keys(wordSpacing).map(key => ({
-        [`.word-spacing-${key}`]: { wordSpacing: wordSpacing[key] },
-      }));
-      addUtilities(utilities);
-    },
+    
   ],
 }
 

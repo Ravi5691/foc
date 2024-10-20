@@ -34,7 +34,7 @@ const MultiStepForm = () => {
   const projectLengths = ['Single', 'Recurring', 'Permanent'];
 
   return (
-    <div className="max-w-screen bg-transparent text-white flex flexx-col items-center justify-center ">
+    <div className="max-w-screen  text-white flex flexx-col items-center justify-center">
       <div className=" max-w-2xl  flex flex-row m-20" >
         {/* Step Indicator */}
         <div className="flex flex-row  justify-around  border-r-2  pr-20 pt-9  m-5 -ml-36  mt-0">
@@ -185,7 +185,7 @@ const MultiStepForm = () => {
           <div className='bg-gradient-to-r from-[#3C5557] to-[#1D2B2C] rounded-lg p-[2px]'>
           <button
              onClick={handleNext}
-             className={`bg-[#0e1919] text-xs px-9 h-8 rounded-lg ${selectedProjectLength ? 'bg-green-500' : 'bg-gray-500'}`}
+             className={`bg-[#0e1919] text-xs px-9 h-8 rounded-lg ${selectedProjectLength ? 'bg-green-500' : 'bg-[#0e1919]'}`}
              disabled={!selectedProjectLength}
           >
             Next
