@@ -4,6 +4,7 @@ import ImageSwitcher from './components/imageStw';
 import Portfolio from './components/portfolio';
 import Count from './components/count';
 import Faq from './components/faq';
+import Footer from './components/footer';
 
 function App() {
    
@@ -18,15 +19,17 @@ function App() {
       <div  className="flex flex-col justify-center items-end " >
       <nav className="space-x-6">
             <a href="#" className="text-gray-400 hover:text-white">Home</a>
-            <a href="#" className="text-gray-400 hover:text-white">About</a>
-            <a href="#" className="text-red-500 border border-red-500 rounded-full px-4 py-1 hover:bg-red-500 hover:text-white">Contact Us</a>
+            <a href="#" className="text-gray-400 hover:text-white">Order</a>
+            <a href="#" className="text-gray-400 hover:text-white">Login</a>
+            <a href="#" className="text-gray-400 hover:text-white">Services</a>
+            <a href="#" className="text-red-500 border border-red-500 rounded-full px-4 py-1 hover:bg-red-500 hover:text-white">Book a Meet</a>
           </nav>
           </div> 
     </div>
     <div className='flex justify-center items-center w-[1330px] h-[150px] my-[80px] mx-[318px] bg-[url("https://cdn.prod.website-files.com/668f8a8a2e706f5af78990a3/668fed4847a97a5f4362dda5_Vector%20(15).png")] bg-cover bg-center'>
   <input 
     type="text"
-    className='w-[950px] h-16 rounded-xl border-4 focus:outline-none hover:border-blue-500 pl-5'
+    className='w-[950px] h-16 rounded-xl border-4 focus:outline-none hover:border-BrightLightBlue pl-5'
     placeholder='Provide a brief overview of your project'
   />
 </div>
@@ -52,6 +55,9 @@ function App() {
     </div>
     <div className='flex justify-center w-[1330px] m-9'>
       <Faq/>
+    </div>
+    <div className='flex justify-center mt-20'>
+      <Footer/>
     </div>
     </div>
 

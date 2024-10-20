@@ -150,7 +150,8 @@ const Pricing = () => {
 
 </div>
 </div>
-<div className=' flex flex-col w-[30%] p-5 bg-transparent border-2 text-white justify-center rounded-xl m-10 '>
+{/* Specsheet */}
+{/* <div className=' flex flex-col w-[30%] p-5 bg-transparent border-2 text-white justify-center rounded-xl m-10 '>
     <div className='flex flex-col justify-center items-center m-5'>
     <span  className='text-3xl tracking-wider font-semibold mb-3'>SPECSHEET</span>
     <span className='text-xs leading-normal block max-w-[90%] text-center'>This sheet has all the scope of work listedd below based on the questions you answered</span>
@@ -190,7 +191,7 @@ const Pricing = () => {
         </div>
        
     </div>
-</div>
+</div> */}
 </div>
   )
 }

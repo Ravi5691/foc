@@ -8,15 +8,18 @@ import Portfolio from './components/portfolio.jsx'
 import BarAnimation from './components/barAnimation.jsx'
 import MultiStepForm from './components/QuesAsking/multiStepForm.jsx'
 import QuestionAsking from './components/QuesAsking/questionAsking.jsx'
+import Footer from './components/footer.jsx'
+import Dashboard from './components/dashboard.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <ImageSwitcher/> */}
+    <ImageSwitcher/>
     {/* <Faq/> */}
     {/* <Portfolio/> */}
     {/* <App/> */}
+    {/* <Dashboard/> */}
     {/* <BarAnimation/> */}
-    <QuestionAsking/>
+    {/* <QuestionAsking/> */}
 
   </StrictMode>,
 )
