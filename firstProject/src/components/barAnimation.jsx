@@ -2,20 +2,9 @@ import React from 'react'
 
 const BarAnimation = () => {
   return (
-        //   {/* Image Animation */}
-        //   { /* <div className="animate">
-        //       <img src="/frise-2.2f579f.png" alt="" />
-        //       <img src="/frise-2.2f579f.png" alt="" />
-        //   </div> */}
-    
-        //   {/* Image Animation - Reversed direction */}
-        //   {/* <div className="animate-reversed">
-        //       <img src="/frise-2.2f579f.png" alt="" />
-        //       <img src="/frise-2.2f579f.png" alt="" />
-        //   </div> */}
-      
         //   {/* Text Animation */}
-        <div className="bg-green w-screen  p-4 flex items-center overflow-hidden fixed h-28">
+       
+        <div className="bg-green w-screen  p-4 flex items-center overflow-hidden h-28">
         {/* Wrapper for scrolling content */}
         <div className="animate whitespace-nowrap flex items-center">
           {Array(12)
@@ -40,6 +29,7 @@ const BarAnimation = () => {
             ))}
         </div>
       </div>
+  
   )
 }
 

@@ -10,16 +10,15 @@ import MultiStepForm from './components/QuesAsking/multiStepForm.jsx'
 import QuestionAsking from './components/QuesAsking/questionAsking.jsx'
 import Footer from './components/footer.jsx'
 import Dashboard from './components/dashboard.jsx'
+import SemiCircleProgressBar from './components/taskbar.jsx'
+import Gauge from './components/taskbar.jsx'
+import TodoStatus from './components/todoStatus.jsx'
+import ToDoList from './components/todoStatus.jsx'
+import EditorInfo from './components/editorinfo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ImageSwitcher/>
-    {/* <Faq/> */}
-    {/* <Portfolio/> */}
     {/* <App/> */}
-    {/* <Dashboard/> */}
-    {/* <BarAnimation/> */}
-    {/* <QuestionAsking/> */}
-
+    <Dashboard/>
   </StrictMode>,
 )

@@ -1,9 +1,12 @@
 import React from 'react'
 import { useState } from 'react';
+import SemiCircleProgressBar from './taskbar';
+import ToDoList from './todoStatus';
+import EditorInfo from './editorinfo';
 
 const Dashboard = () => {
 
-    const [completedTasks, setCompletedTasks] = useState(2);
+    const [completedTasks, setCompletedTasks] = useState(10);
     const totalTasks = 15;
 
     const handleShare = () => {
@@ -14,16 +17,8 @@ const Dashboard = () => {
 
   return (
     <div>
-        
-{/* <button data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar" aria-controls="separator-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-   <span class="sr-only">Open sidebar</span>
-   <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-   <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
-   </svg>
-</button> */}
-
-<aside id="separator-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-   <div class="h-full px-3 py-4 overflow-y-auto bg-gradient-to-l from-emerald-500 to-emerald-900">
+     <aside id="separator-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+     <div class="h-full px-3 py-4 overflow-y-auto bg-gradient-to-l from-emerald-500 to-emerald-900">
       <ul class="space-y-2 font-medium">
          <li>
             <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
@@ -122,40 +117,47 @@ const Dashboard = () => {
             </a>
          </li>
       </ul>
-   </div>
-</aside>
+     </div>
+   </aside>
 
-<div class="p-4 sm:ml-64">
-   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-      <button class="sharebtn relative flex z-10 bg-white border rounded-md p-2 opacity-50 hover:opacity-100 focus:outline-none focus:border-blue-400" title="click to enable menu" onClick={handleShare}>
+<div class="p-2 sm:ml-64 h-screen bg-elliptical-gradient">
+   <div class="p-4 border-2 pb-1 border-gray-200  rounded-lg dark:border-Green-400">
+
+      <div className='flex justify-center'>
+         <h1 className="text-5xl font-bold font-serif tracking-wider p-5 text-white">Welcome <span className='tracking-normal bg-Green-600 p-2  rounded-xl text-4xl font-medium text-white'>@kartik2089</span></h1>
+      </div>
+      <div className='flex justify-around m-10 gap-10  '>
+         <div className='h-[250px] bg-emerald-800 rounded-xl border-2 w-1/3'>
+         <SemiCircleProgressBar/>
+         </div>
+        
+         <div className='h-[250px] bg-white rounded-xl w-1/3'>o</div>
+
+         <div className='h-[250px] bg-white rounded-xl w-1/3 flex justify-center items-center'>
+         <button class="sharebtn relative flex z-10 bg-white border rounded-md p-2 opacity-50 hover:opacity-100 focus:outline-none focus:border-blue-400" title="click to enable menu" onClick={handleShare}>
           <span class="inline-block pr-4 text-gray-600">Share</span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-5 w-6 my-1 text-blue-700">
             <path fill="currentColor" d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z">
             </path>
           </svg>
       </button>
-      <div className="w-full">
-                <h3 className="text-lg font-bold">Task Progress</h3>
-                <p className="text-sm text-gray-600 mb-2">{completedTasks} out of {totalTasks} videos completed</p>
-                <div className="bg-gray-300 rounded-full h-4 w-full">
-                    <div 
-                        className="bg-green-500 h-4 rounded-full"
-                        style={{ width: `${progressPercentage}%` }}
-                    ></div>
-                </div>
-            </div>
-   <div className="flex flex-col items-center p-6 bg-white shadow-lg rounded-lg w-80">
-   
-            <div className="w-full mb-4">
-                <h3 className="text-lg font-bold">Editor Task</h3>
-                <p className="text-sm text-gray-600 mb-2">Upload your work here</p>
-                <input type="file" className="w-full" />
-            </div>
-           
-        </div>
-   </div>
-</div>
+      </div>
+      </div>
 
+      <div className="w-full">
+       <div className='flex flex-row justify-around  gap-10 m-10 '>
+         <div className='w-[800px] bg-white h-[275px] rounded-xl'> 
+            <ToDoList/>
+          </div>
+         <div className='w-1/3 bg-white rounded-xl'> 
+           <EditorInfo/>
+          </div>
+
+       </div>
+       </div>
+
+    </div>
+    </div>
     </div>
   )
 }

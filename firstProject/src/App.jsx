@@ -1,10 +1,12 @@
 import { useState , useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import './App.css'
 import ImageSwitcher from './components/imageStw';
 import Portfolio from './components/portfolio';
 import Count from './components/count';
 import Faq from './components/faq';
 import Footer from './components/footer';
+import BarAnimation from './components/barAnimation';
 
 function App() {
    
@@ -18,7 +20,7 @@ function App() {
         </div>
       <div  className="flex flex-col justify-center items-end " >
       <nav className="space-x-6">
-            <a href="#" className="text-gray-400 hover:text-white">Home</a>
+            <a href="#" className="text-gray-400 hover:text-white"> Home</a>
             <a href="#" className="text-gray-400 hover:text-white">Order</a>
             <a href="#" className="text-gray-400 hover:text-white">Login</a>
             <a href="#" className="text-gray-400 hover:text-white">Services</a>
@@ -41,11 +43,14 @@ function App() {
       <span className='text-base text-white '> Controlled Freelence environment which helps businesses get work done efficiently</span>
       
     </div>
-    <div className='w-[1447px] m-32 mb-20 bg-transparent h-12 shadow-top-bottom flex  text-white word-spacing-widest justify-center p-3'>
+    <div className='w-[1447px] m-32 mb-20 bg-transparent h-12 shadow-top-bottom flex  text-slate-200  tracking-widest justify-center p-3'>
       <span> Project &bull; Product Outsourcing &bull; Talent sourcing &bull; Workflow &bull; Quality freelancers &bull; Timely delivery</span>
     </div> 
     <div className='flex justify-center w-[1330px]  m-9'>
       <Count/>
+    </div>
+    <div className='flex justify-center mt-5 mb-20 w-full' >
+      <BarAnimation/>
     </div>
     <div className='flex justify-center w-[1330px] m-9 '>
       <ImageSwitcher />
@@ -53,10 +58,10 @@ function App() {
     <div className='flex justify-center w-[1330px] m-9 mt-16'>
       <Portfolio/>
     </div>
-    <div className='flex justify-center w-[1330px] m-9'>
+    <div className='flex justify-center w-[1330px] m-9 mt-2'>
       <Faq/>
     </div>
-    <div className='flex justify-center mt-20'>
+    <div className='flex justify-center mt-10'>
       <Footer/>
     </div>
     </div>

@@ -27,7 +27,7 @@ const ImageSwitcher = () => {
   };
 
   return (
-    <div className='flex flex-col justify-center items-center  gap-10 min-h-screen p-10'>
+    <div className='flex flex-col justify-center items-center  gap-16 min-h-screen p-10'>
       <div className='w-full max-w-[800px] flex justify-center'>
         <h1 className='text-white text-3xl md:text-5xl font-bold leading-relaxed text-center'>
           How it <span className='text-green'>Works</span>
@@ -54,7 +54,7 @@ const ImageSwitcher = () => {
           <img
             src={imageSrc}
             alt="Switchable"
-            className={`rounded-xl h-full transition-transform duration-1000 ease-in-out`} // Smooth transition for image
+            className={`rounded-xl h-full transition-transform duration-1000 ease-in-out object-cover`} // Smooth transition for image
           />
         </div>
       </div>
