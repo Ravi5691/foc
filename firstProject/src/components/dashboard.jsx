@@ -152,7 +152,6 @@ const Dashboard = () => {
          <div className='w-1/3 bg-white rounded-xl'> 
            <EditorInfo/>
           </div>
-das
        </div>
        </div>
 
