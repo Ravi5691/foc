@@ -59,7 +59,7 @@ const SemiCircleProgressBar = () => {
                         A ${radius}, ${radius} 0 0 1 ${centerX + radius}, ${centerY}
                     `}
                     fill="none"
-                    stroke="#4caf50"
+                    stroke="#5bc95f"
                     strokeWidth={strokeWidth}
                     strokeDasharray={`${progress}, ${circumference / 2}`}
                     strokeLinecap="round"

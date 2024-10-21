@@ -50,11 +50,11 @@ const ImageSwitcher = () => {
         </div>
 
         {/* Second Column: Image with smooth transition */}
-        <div className="flex-1 flex justify-center items-center relative overflow-hidden">
+        <div className="flex-1 flex justify-center items-center relative overflow-hidden   rounded-xl">
           <img
             src={imageSrc}
             alt="Switchable"
-            className={`rounded-xl h-full transition-transform duration-1000 ease-in-out object-cover`} // Smooth transition for image
+            className={`rounded-xl h-full transition-transform duration-1000 ease-in-out object-cover border-[#1D2B2C] border-4`} // Smooth transition for image
           />
         </div>
       </div>
