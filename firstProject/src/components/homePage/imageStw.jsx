@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 const ImageSwitcher = () => {
@@ -27,7 +28,7 @@ const ImageSwitcher = () => {
   };
 
   return (
-    <div className='flex flex-col justify-center items-center  gap-16 min-h-screen p-10'>
+    <div className='flex flex-col justify-center items-center gap-16 min-h-screen p-5 md:p-10'>
       <div className='w-full max-w-[800px] flex justify-center'>
         <h1 className='text-white text-3xl md:text-5xl font-bold leading-relaxed text-center'>
           How it <span className='text-green'>Works</span>
@@ -40,21 +41,21 @@ const ImageSwitcher = () => {
           {items.map((item, index) => (
             <div className='flex justify-center flex-1' key={index}>
               <span
-                className="cursor-pointer bg-[#3C5557] hover:bg-green border-4 border-[#1D2B2C] p-4 rounded-xl w-full h-[200px] flex items-center justify-center text-center md:p-6 lg:p-8"
+                className="cursor-pointer bg-[#3C5557] hover:bg-green border-4 border-[#1D2B2C] p-4 rounded-xl w-full h-[120px] sm:h-[150px] md:h-[200px] flex items-center justify-center text-center text-sm md:text-base"
                 onMouseEnter={() => changeImage(item.image)}
               >
-                {item.text} {/* Dynamic text */}
+                {item.text}
               </span>
             </div>
           ))}
         </div>
 
         {/* Second Column: Image with smooth transition */}
-        <div className="flex-1 flex justify-center items-center relative overflow-hidden   rounded-xl">
+        <div className="flex-1 flex justify-center items-center relative overflow-hidden rounded-xl">
           <img
             src={imageSrc}
             alt="Switchable"
-            className={`rounded-xl h-full transition-transform duration-1000 ease-in-out object-cover border-[#1D2B2C] border-4`} // Smooth transition for image
+            className={`rounded-xl h-full w-full object-cover transition-transform duration-1000 ease-in-out border-[#1D2B2C] border-4`} // Smooth transition for image
           />
         </div>
       </div>
@@ -63,5 +64,3 @@ const ImageSwitcher = () => {
 };
 
 export default ImageSwitcher;
-
-

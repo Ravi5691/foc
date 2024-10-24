@@ -120,42 +120,74 @@ const Dashboard = () => {
      </div>
    </aside>
 
-<div class="p-2 sm:ml-64 h-screen bg-elliptical-gradient">
-   <div class="p-4 border-2 pb-1 border-gray-200  rounded-lg dark:border-Green-400">
+   <div className="p-2 sm:ml-64 bg-elliptical-gradient h-full">
+  <div className="p-4 border-2 pb-1 border-gray-200 rounded-lg dark:border-green-400">
 
-      <div className='flex justify-center'>
-         <h1 className="text-5xl font-bold font-serif tracking-wider p-5 text-white">Welcome <span className='tracking-normal bg-Green-600 p-2  rounded-xl text-4xl font-medium text-white'>@kartik2089</span></h1>
-      </div>
-      <div className='flex justify-around m-10 gap-10  '>
-         <div className='h-[250px] bg-emerald-800 rounded-xl border-2 w-1/3'>
-         <SemiCircleProgressBar/>
-         </div>
-         <div className='h-[250px] bg-white rounded-xl w-1/3'>o</div>
-
-         <div className='h-[250px] bg-white rounded-xl w-1/3 flex justify-center items-center'>
-         <button class="sharebtn relative flex z-10 bg-white border rounded-md p-2 opacity-50 hover:opacity-100 focus:outline-none focus:border-blue-400" title="click to enable menu" onClick={handleShare}>
-          <span class="inline-block pr-4 text-gray-600">Share</span>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-5 w-6 my-1 text-blue-700">
-            <path fill="currentColor" d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z">
-            </path>
-          </svg>
-      </button>
-      </div>
-      </div>
-
-      <div className="w-full">
-       <div className='flex flex-row justify-around  gap-10 m-10 '>
-         <div className='w-[800px] bg-white h-[275px] rounded-xl'> 
-            <ToDoList/>
-          </div>
-         <div className='w-1/3 bg-white rounded-xl'> 
-           <EditorInfo/>
-          </div>
-       </div>
-       </div>
-
+  <div className="flex flex-col sm:flex-row justify-between items-center p-4 mt-4">
+    <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold font-serif tracking-wide text-white text-center sm:text-left mb-2 sm:mb-0">
+        Welcome
+        <span className="bg-green-600 p-1 sm:p-2 rounded-lg text-xl sm:text-3xl md:text-4xl font-medium bg-Green-500 text-white ml-2">
+            @kartik2089
+        </span>
+    </h1>
+    <div className="rounded-xl flex justify-center items-center">
+        <button
+            className="sharebtn relative flex z-10 bg-white border border-transparent rounded-md p-1 sm:p-2 opacity-80 hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-Green-400 transition duration-150 ease-in-out"
+            title="Click to enable menu"
+            onClick={handleShare}
+            aria-label="Share menu"
+        >
+            <span className="inline-block pr-2 sm:pr-4 text-gray-600">Share</span>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                className="h-5 w-6 my-1 text-green-700"
+            >
+                <path
+                    fill="currentColor"
+                    d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z"
+                ></path>
+            </svg>
+        </button>
     </div>
+</div>
+
+
+
+    <div className="flex flex-col lg:flex-row justify-around m-10 gap-5 lg:gap-10">
+      <div className="h-[200px] sm:h-[250px] bg-emerald-800 rounded-xl border-2 w-full lg:w-1/3">
+        <SemiCircleProgressBar />
+      </div>
+      <div className="h-auto sm:h-[250px] bg-white w-full lg:w-2/3 p-5 shadow-lg overflow-y-auto max-h-[250px]">
+    <h1 className="text-xl sm:text-2xl font-bold mb-3 text-gray-800">Upgrade Your Pack for Exclusive Features!</h1>
+    <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-600">
+        Unlock a world of possibilities by upgrading your pack! Here’s what you’ll get:
+    </h3>
+    <ul className="list-disc list-inside text-sm sm:text-base text-gray-700 mb-4">
+        <li><span className="font-semibold">Access Premium Tools and Features:</span> Enjoy advanced functionality and powerful tools that are available exclusively to upgraded users.</li>
+        <li><span className="font-semibold">Priority Support:</span> Get dedicated, faster support to resolve your issues and help you get the most out of your experience.</li>
+        <li><span className="font-semibold">Increased Limits:</span> Benefit from higher usage limits, more storage, and extended capabilities to help you achieve your goals.</li>
+    </ul>
+    <p className="text-sm sm:text-base font-medium text-gray-800">
+        Don’t miss out on enhancing your experience. <span className="text-green-600 font-bold">Upgrade now</span> to unlock all these features and more!
+    </p>
+</div>
     </div>
+
+    <div className="w-full">
+      <div className="flex flex-col lg:flex-row justify-around gap-24 lg:gap-10 m-10">
+        <div className="w-full lg:w-[800px] bg-white h-[275px] rounded-xl">
+          <ToDoList />
+        </div>
+        <div className="w-full lg:w-1/3 bg-white rounded-xl">
+          <EditorInfo />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
     </div>
   )
 }

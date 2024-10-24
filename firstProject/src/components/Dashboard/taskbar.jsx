@@ -6,39 +6,37 @@ const SemiCircleProgressBar = () => {
 
     const progressPercentage = (completedTasks / totalTasks) * 100;
 
-    const radius = 100; // Radius of the semi-circle
-    const strokeWidth = 15; // Thickness of the semi-circle
-    const circumference = Math.PI * (radius * 2); // Circumference of the full circle
-    const progress = (progressPercentage / 100) * (circumference / 2); // Length of the progress stroke for the semi-circle
+    const radius = 80; // Reduced radius for better responsiveness on smaller screens
+    const strokeWidth = 12; // Reduced stroke thickness
+    const circumference = Math.PI * (radius * 2); 
+    const progress = (progressPercentage / 100) * (circumference / 2); 
 
-    const centerX = radius + strokeWidth / 2; // Center X of the semi-circle
-    const centerY = radius + strokeWidth / 2; // Center Y of the semi-circle
+    const centerX = radius + strokeWidth / 2; 
+    const centerY = radius + strokeWidth / 2; 
 
-    // Needle dimensions
-    const needleWidth = 7;
-    const needleHeight = 80;
+    const needleWidth = 5; 
+    const needleHeight = 60; 
 
-    // State for the animated needle angle
-    const [needleAngle, setNeedleAngle] = useState(-90); // Start at -90 degrees (0% progress)
+    const [needleAngle, setNeedleAngle] = useState(-90); 
 
-    // Animate the needle to the target position after component mounts
     useEffect(() => {
         const targetAngle = (progressPercentage / 100) * 180 - 90;
         setTimeout(() => {
             setNeedleAngle(targetAngle);
-        }, 100); // Delay for better effect
+        }, 100); 
     }, [progressPercentage]);
 
     return (
         <div className="flex flex-col items-center">
-            <h3 className="text-lg text-white pt-4 font-bold mb-2">Task Progress</h3>
-            <p className="text-sm text-white mb-5">
+            <h3 className="text-base sm:text-lg text-white pt-2 sm:pt-4 font-bold mb-1 sm:mb-2">Task Progress</h3>
+            <p className="text-xs sm:text-sm text-white mb-3 sm:mb-5">
                 {completedTasks} out of {totalTasks} tasks completed
             </p>
             <svg
                 width={radius * 2 + strokeWidth}
                 height={radius + strokeWidth}
                 viewBox={`0 0 ${radius * 2 + strokeWidth} ${radius + strokeWidth}`}
+                className="w-48 sm:w-56 md:w-64" // Responsive width for different screen sizes
             >
                 {/* Background semi-circle */}
                 <path
@@ -79,17 +77,17 @@ const SemiCircleProgressBar = () => {
                         width={needleWidth}
                         height={needleHeight}
                         fill="red"
-                        rx="4" // Rounded corners
+                        rx="4" 
                     />
                     <circle
                         cx={centerX}
                         cy={centerY}
-                        r={7}
+                        r={5}
                         fill="red"
                     />
                 </g>
             </svg>
-            <div className="text-xl text-white font-bold mt-2">{Math.round(progressPercentage)}%</div>
+            <div className="text-lg sm:text-xl text-white font-bold mt-2">{Math.round(progressPercentage)}%</div>
         </div>
     );
 };

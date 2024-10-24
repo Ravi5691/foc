@@ -39,21 +39,20 @@ const ToDoList = () => {
     };
 
     return (
-        <div className="container mx-auto p-3">
-
+        <div className="container mx-auto p-2 sm:p-4 bg-white rounded-md  shadow-md">
             {/* Form to create a new project */}
-            <div className="mb-4">
+            <div className="mb-3 flex flex-col sm:flex-row gap-2">
                 <input
                     type="text"
                     placeholder="Project Name"
                     value={newProjectName}
                     onChange={(e) => setNewProjectName(e.target.value)}
-                    className="border p-2 mr-2 w-80"
+                    className="border p-1 rounded w-full sm:w-80"
                 />
                 <select
                     value={newProjectStatus}
                     onChange={(e) => setNewProjectStatus(e.target.value)}
-                    className="border p-2 mr-2"
+                    className="border p-1 rounded w-full sm:w-auto"
                 >
                     <option value="Active">Active</option>
                     <option value="Pending">Pending</option>
@@ -62,28 +61,28 @@ const ToDoList = () => {
                 </select>
                 <button
                     onClick={addProject}
-                    className="bg-Green-700 text-white p-2 rounded"
+                    className="bg-Green-700 text-white p-1 rounded w-full sm:w-auto"
                 >
                     Add Project
                 </button>
             </div>
 
             {/* Scrollable container for the table */}
-            <div className="overflow-y-auto max-h-48 border border-gray-200 rounded">
+            <div className="overflow-y-auto max-h-[200px] border  border-gray-200 rounded-md">
                 <table className="min-w-full bg-white">
-                    <thead>
+                    <thead className="bg-gray-50">
                         <tr>
-                            <th className="py-2 px-4 border-b">Project Name</th>
-                            <th className="py-2 px-4 border-b">Status</th>
-                            <th className="py-2 px-4 border-b">Iterations</th>
+                            <th className="py-2 px-3 border-b text-left text-sm font-medium">Project Name</th>
+                            <th className="py-2 px-3 border-b text-left text-sm font-medium">Status</th>
+                            <th className="py-2 px-3 border-b text-left text-sm font-medium">Iterations</th>
                         </tr>
                     </thead>
                     <tbody>
                         {projects.map((project) => (
-                            <tr key={project.id} className="text-center">
-                                <td className="py-2 px-4 border-b">{project.name}</td>
-                                <td className="py-2 px-4 border-b">{project.status}</td>
-                                <td className="py-2 px-4 border-b">{project.iterations}</td>
+                            <tr key={project.id} className="hover:bg-gray-100">
+                                <td className="py-1 px-3 border-b text-sm">{project.name}</td>
+                                <td className="py-1 px-3 border-b text-sm">{project.status}</td>
+                                <td className="py-1 px-3 border-b text-sm">{project.iterations}</td>
                             </tr>
                         ))}
                     </tbody>
@@ -94,3 +93,4 @@ const ToDoList = () => {
 };
 
 export default ToDoList;
+

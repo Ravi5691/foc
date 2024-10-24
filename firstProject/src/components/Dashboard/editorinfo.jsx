@@ -1,18 +1,18 @@
-import React, { useState } from 'react'; // Import useState
+import React, { useState } from 'react';
 
 const EditorInfo = () => {
-    const [isClicked, setIsClicked] = useState(false); // Initialize state for click tracking
+    const [isClicked, setIsClicked] = useState(false);
 
     return (
-        <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-emerald-800">
+        <div className="w-full max-w-xs sm:max-w-sm lg:max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-emerald-800">
             <div className="flex justify-end px-4 pt-4">
                 <button
-                    className="inline-block text-gray-500 dark:text-gray-400  rounded-lg text-sm p-1 pb-0"
+                    className="inline-block text-gray-500 dark:text-gray-400 rounded-lg text-sm p-1 pb-0"
                     type="button"
-                    onClick={() => setIsClicked(!isClicked)} // Toggle click state on button click
+                    onClick={() => setIsClicked(!isClicked)}
                 >
                     <svg
-                        className={`w-6 h-6 cursor-pointer transition-colors duration-300 ${isClicked ? 'text-yellow-400' : 'text-gray-200'}`} // Change text color based on click state
+                        className={`w-6 h-6 cursor-pointer transition-colors duration-300 ${isClicked ? 'text-yellow-400' : 'text-gray-200'}`}
                         fill="currentColor"
                         xmlns="http://www.w3.org/2000/svg"
                         xmlSpace="preserve"
@@ -25,22 +25,22 @@ const EditorInfo = () => {
             </div>
             <div className="flex flex-col items-center pb-6">
                 <img
-                    className="w-20 h-20 mb-3 rounded-full object-cover shadow-lg"
+                    className="w-16 h-16 sm:w-20 sm:h-20 mb-3 rounded-full object-cover shadow-lg"
                     src="https://plus.unsplash.com/premium_photo-1678197937465-bdbc4ed95815?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fHww"
                     alt="Bonnie image"
                 />
-                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
+                <h5 className="mb-1 text-lg sm:text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
                 <span className="text-sm text-gray-500 dark:text-gray-400">Video Editor</span>
-                <div className="flex mt-4 md:mt-6">
+                <div className="flex flex-col sm:flex-row mt-4 sm:mt-6 gap-2">
                     <a
                         href="#"
-                        className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-Green-600 rounded-lg hover:bg-Green-800 focus:ring-4 focus:outline-none focus:ring-Green-700 "
+                        className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-700"
                     >
                         More Details
                     </a>
                     <a
                         href="#"
-                        className="py-2 px-4 ms-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                        className="inline-flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                     >
                         Message
                     </a>
@@ -51,3 +51,4 @@ const EditorInfo = () => {
 };
 
 export default EditorInfo;
+
