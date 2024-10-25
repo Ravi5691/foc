@@ -12,7 +12,6 @@ function App() {
           <Route path="/" element={<HeaderElement/>}/>
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/questions" element={<QuestionAsking/>}/>
-          
         </Routes>
      </BrowserRouter>
   );
