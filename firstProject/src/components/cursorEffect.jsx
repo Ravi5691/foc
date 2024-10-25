@@ -21,7 +21,7 @@ const LightCursor = () => {
   return (
     <div
       ref={cursorRef}
-      className="fixed w-80 h-80 bg-white opacity-10 rounded-full pointer-events-none"
+      className="fixed w-60 h-60 bg-white opacity-10 rounded-full pointer-events-none sm:block hidden"
       style={{
         transform: 'translate(-50%, -50%)',
         filter: 'blur(60px)',

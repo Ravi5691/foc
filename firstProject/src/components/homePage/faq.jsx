@@ -33,7 +33,7 @@ const Faq = () => {
                 className="flex items-center justify-between w-full px-4 py-5 sm:p-6"
                 onClick={() => toggleFaq(0)} 
               >
-                <span className="text-lg font-semibold text-black">
+                <span className="text-sm sm:text-lg font-semibold text-black">
                   How to create an account?
                 </span>
                 <svg
@@ -82,7 +82,7 @@ const Faq = () => {
                 className="flex items-center justify-between w-full px-4 py-5 sm:p-6"
                 onClick={() => toggleFaq(1)} 
               >
-                <span className="text-lg font-semibold text-black">
+                <span className="text-sm sm:text-lg font-semibold text-black">
                   How can I make payment using Paypal?
                 </span>
                 <svg
@@ -131,7 +131,7 @@ const Faq = () => {
                 className="flex items-center justify-between w-full px-4 py-5 sm:p-6"
                 onClick={() => toggleFaq(2)} 
               >
-                <span className="text-lg font-semibold text-black">
+                <span className="text-sm sm:text-lg font-semibold text-black">
                   Can I cancel my plan?
                 </span>
                 <svg
@@ -180,7 +180,7 @@ const Faq = () => {
                 className="flex items-center justify-between w-full px-4 py-5 sm:p-6"
                 onClick={() => toggleFaq(3)} 
               >
-                <span className="text-lg font-semibold text-black">
+                <span className="text-sm sm:text-lg font-semibold text-black">
                   How can I reach support?
                 </span>
                 <svg
