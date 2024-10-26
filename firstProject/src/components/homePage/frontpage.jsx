@@ -69,7 +69,7 @@ const HeaderElement = () => {
       <div className="flex justify-center items-center w-full h-[150px] my-6 sm:my-8 md:my-10 lg:my-12 px-4 sm:px-6 md:px-8 lg:px-12 bg-[url('https://cdn.prod.website-files.com/668f8a8a2e706f5af78990a3/668fed4847a97a5f4362dda5_Vector%20(15).png')] bg-center bg-cover sm:bg-[length:80%] md:bg-[length:70%] lg:bg-cover">
       <input
           type="text"
-          className="w-full max-w-[900px] h-16 rounded-xl border-4 focus:outline-none hover:border-BrightLightBlue pl-5"
+          className="w-full max-w-[900px] h-16 rounded-xl border-4 focus:border-[#83FF97] outline-none hover:border-[#83FF97] pl-5"
           placeholder="Provide a brief overview of your project"
       />
       </div>
@@ -85,7 +85,7 @@ const HeaderElement = () => {
 
       {/* Title and Subtitle Section */}
       <div className="w-full max-w-[1237px] h-auto mt-5  mb-10 mx-4 sm:mx-8 md:mx-16 lg:mx-24 text-center flex flex-col gap-2">
-      <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold text-BrightLightBlue">
+      <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold text-[#83FF97]">
            Define It, Let AI Design It.
       </span>
       <br />
