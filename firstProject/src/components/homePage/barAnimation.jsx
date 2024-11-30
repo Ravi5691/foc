@@ -12,7 +12,7 @@ const BarAnimation = () => {
             .map((_, i) => (
               <div
                 key={i}
-                className="text-white text-5xl p-3 font-semibold whitespace-nowrap inline-flex items-center justify-center"
+                className="text-[#192627] text-5xl p-3 font-semibold whitespace-nowrap inline-flex items-center justify-center"
               >
                 •  NEW SITE LAUNCHING SOON&nbsp;
               </div>
@@ -22,7 +22,7 @@ const BarAnimation = () => {
             .map((_, i) => (
               <div
                 key={i + 12} // Different key to avoid duplicate key warning
-                className="text-white text-5xl p-3 font-semibold inline-flex items-center justify-center"
+                className="text-[#192627] text-5xl p-3 font-semibold inline-flex items-center justify-center"
               >
                 • NEW SITE LAUNCHING SOON&nbsp;
               </div>

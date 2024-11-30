@@ -41,7 +41,9 @@ const ImageSwitcher = () => {
           {items.map((item, index) => (
             <div className='flex justify-center flex-1' key={index}>
               <span
-                className="cursor-pointer bg-[#3C5557] hover:bg-green border-4 border-[#1D2B2C] p-4 rounded-xl w-full h-[120px] sm:h-[150px] md:h-[200px] flex items-center justify-center text-center text-sm md:text-base"
+                className="text-white hover:text-black cursor-pointer bg-gradient-to-tr from-[#304B4C00] to-[#263839] hover:from-green hover:to-green border-2
+
+                 border-[#1D2B2C] p-4 rounded-xl w-full h-[120px] sm:h-[150px] md:h-[200px] flex items-center justify-center text-center text-md md:text-lg"
                 onMouseEnter={() => changeImage(item.image)}
               >
                 {item.text}
@@ -55,7 +57,7 @@ const ImageSwitcher = () => {
           <img
             src={imageSrc}
             alt="Switchable"
-            className={`rounded-xl h-full w-full object-cover transition-transform duration-1000 ease-in-out border-[#1D2B2C] border-4`} // Smooth transition for image
+            className={`rounded-xl h-full w-full object-cover transition-transform duration-1000 ease-in-out border-[#1D2B2C] border-2`} // Smooth transition for image
           />
         </div>
       </div>

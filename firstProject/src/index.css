@@ -6,11 +6,11 @@
   @layer components {
     .animate{
       display: flex;
-      animation: scroll 30s linear infinite;
+      animation: scroll 50s linear infinite;
     }
     .animate-reversed{
       display: flex;
-      animation: scroll 30s linear infinite;
+      animation: scroll 50s linear infinite;
       animation-direction: reverse;
     }
   
